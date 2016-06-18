@@ -12,26 +12,22 @@
 	<!--  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.js"></script> -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/respond.min.js"></script>
 	<!-- <link rel="stylesheet" type="text/css" href="megamenu.css"/> -->
 	<script type="text/javascript">
 	$(document).ready(function () {
 		if($(document).width()<=750){
-			console.log("1");
 			$("#nav_menu").show();
 			$("#nav_main").hide();
 		}
-
-
 	});
 	$(window).resize(function() { 
 		var menu_flag=true;
 		$("#nav_menu").click(function(){
 				if(menu_flag){
-					console.log(1);
 					menu_flag=false;
 					$("#nav_main").show();
 				}else{
-					console.log(2);
 					menu_flag=true;
 					$("#nav_main").hide();
 				}
@@ -44,7 +40,6 @@
 			$("#nav_menu").hide();
 			$("#nav_main").show();
 		}
-
 	})
 	</script>
 	
@@ -54,7 +49,7 @@
 	<!-- 头部logo开始 -->
 	<div class="container-fluid headertop" >
 		<div class="logo">
-			<a href="/">
+			<a href="/" >
 				<img class="img-responsive" src="images/title.png"></img>
 			</a>
 		</div>
