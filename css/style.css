@@ -30,7 +30,7 @@ body{
 .my_nav li{
 	float: left ;
 	line-height: 50px;
-	padding: 0 20px;
+	padding: 0 00px;
 	text-align: center;
 }
 
@@ -88,11 +88,7 @@ body{
     margin: 5px 20px;
 
 }
-/*广告轮播图开始*/
-.slide{
 
-}
-/*广告轮播图结束*/
 /*本周热点开始*/
 .hot-header{
 	padding: 0 0 10px 0;

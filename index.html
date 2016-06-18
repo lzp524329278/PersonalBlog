@@ -12,6 +12,41 @@
 	<!--  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.js"></script> -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="megamenu.css"/> -->
+	<script type="text/javascript">
+	$(document).ready(function () {
+		if($(document).width()<=750){
+			console.log("1");
+			$("#nav_menu").show();
+			$("#nav_main").hide();
+		}
+
+
+	});
+	$(window).resize(function() { 
+		var menu_flag=true;
+		$("#nav_menu").click(function(){
+				if(menu_flag){
+					console.log(1);
+					menu_flag=false;
+					$("#nav_main").show();
+				}else{
+					console.log(2);
+					menu_flag=true;
+					$("#nav_main").hide();
+				}
+				
+			})
+		if($(document).width()<=750){
+			$("#nav_menu").show();
+			$("#nav_main").hide();
+		}else{
+			$("#nav_menu").hide();
+			$("#nav_main").show();
+		}
+
+	})
+	</script>
 	
 </head>
 
@@ -20,29 +55,37 @@
 	<div class="container-fluid headertop" >
 		<div class="logo">
 			<a href="/">
-				<img src="images/title.png"></img>
+				<img class="img-responsive" src="images/title.png"></img>
 			</a>
 		</div>
 	</div>
 	<!-- 头部logo结束 -->
 
 	<!-- 头部导航条开始 -->
-	<div class="my_navbar">
-		<ul class="my_nav ">
-			<li class="my_nav_active"><a href="#">首页</a></li>
-			<li><a href="#">栏目1</a></li>
-			<li><a href="#">栏目2</a></li>
-			<li><a href="#">栏目3</a></li>
-			<li><a href="#">栏目4</a></li>
-			<li><a href="#">栏目5</a></li>
-			<li><a href="#">我的博客</a></li>
-			<li class="my_nav_active" style="float: right;" ><a href="#" class="glyphicon glyphicon-search"></a></li>
-		</ul>
+	<div class="my_navbar row">
+		<ul class="my_nav">
+			<li id="nav_menu"class="col-md-1 col-sm-1 col-lg-1 col-xs-12" style="display:none;"><a href="#"> MENU</a></li> 
+			<div id="nav_main" >
+				<li class="my_nav_active col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">首页</a></li>
+				<li class="col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">栏目1</a></li>
+				<li class="col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">栏目2</a></li>
+				<li class="col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">栏目3</a></li>
+				<li class="col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">栏目4</a></li>
+				<li class="col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">栏目5</a></li>
+				<li class="col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">栏目6</a></li>
+				<li class="col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">栏目7</a></li>
+				<li class="col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">栏目8</a></li>
+				<li class="col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">栏目9</a></li>
+				<li class="col-md-1 col-sm-1 col-lg-1 col-xs-12"><a href="#">我的博客</a></li>
+			</div>
+			<li class="my_nav_active col-md-1 col-sm-1 col-lg-1 col-xs-12" style="float: right;" ><a href="#" class="glyphicon glyphicon-search"></a></li>
+			
+		</ul> 
 	</div>
 	<!-- 头部导航条结束 -->
 
 	<!-- 公告开始 -->
-	<div class="notice">
+	<div class="notice row">
 		<span class="glyphicon glyphicon-volume-up" style="color: #A9D5A0;"></span>
 		<span>这里是公告</span>
 	</div>
@@ -52,17 +95,17 @@
 	<div class="content">
 		<div class="row">
 			<!-- 正文左侧开始 -->
-			<div class="col-md-3">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
 				<div class="title-header module">
 					<h2 class="title"><strong>博客达人</strong></h2>
 				</div>
 				<div class="master module">
 					<div class="master-item">
 						<div class="row">
-							<div class="col-md-6">
-								<img src="images/icon.jpg"></img>
+							<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+								<img  class="img-responsive" src="images/icon.jpg"></img>
 							</div>
-							<div class="col-md-6" style="padding:10px;">
+							<div class=" col-md-6 col-xs-6 col-lg-6col-sm-6" style="padding:10px;">
 								<span>好聚不好散</span><br>
 								<span>访问:</span><span>2000次</span><br>
 								<span>等级:</span><span>LV2</span><br>
@@ -72,10 +115,10 @@
 					</div>
 					<div class="master-item">
 						<div class="row">
-							<div class="col-md-6">
-								<img src="images/icon.jpg"></img>
+							<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+								<img class="img-responsive" src="images/icon.jpg"></img>
 							</div>
-							<div class="col-md-6" style="padding:10px;">
+							<div class=" col-md-6 col-xs-6 col-lg-6col-sm-6" style="padding:10px;">
 								<span>好聚不好散</span><br>
 								<span>访问:</span><span>2000次</span><br>
 								<span>等级:</span><span>LV2</span><br>
@@ -85,10 +128,10 @@
 					</div>
 					<div class="master-item">
 						<div class="row">
-							<div class="col-md-6">
-								<img src="images/icon.jpg"></img>
+							<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+								<img class="img-responsive" src="images/icon.jpg"></img>
 							</div>
-							<div class="col-md-6" style="padding:10px;">
+							<div class=" col-md-6 col-xs-6 col-lg-6col-sm-6" style="padding:10px;">
 								<span>好聚不好散</span><br>
 								<span>访问:</span><span>2000次</span><br>
 								<span>等级:</span><span>LV2</span><br>
@@ -98,10 +141,10 @@
 					</div>
 					<div class="master-item">
 						<div class="row">
-							<div class="col-md-6">
-								<img src="images/icon.jpg"></img>
+							<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+								<img class="img-responsive" src="images/icon.jpg"></img>
 							</div>
-							<div class="col-md-6" style="padding:10px;">
+							<div class=" col-md-6 col-xs-6 col-lg-6col-sm-6" style="padding:10px;">
 								<span>好聚不好散</span><br>
 								<span>访问:</span><span>2000次</span><br>
 								<span>等级:</span><span>LV2</span><br>
@@ -111,10 +154,10 @@
 					</div>
 					<div class="master-item">
 						<div class="row">
-							<div class="col-md-6">
-								<img src="images/icon.jpg"></img>
+							<div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+								<img  class="img-responsive" src="images/icon.jpg"></img>
 							</div>
-							<div class="col-md-6" style="padding:10px;">
+							<div class=" col-md-6 col-xs-6 col-lg-6 col-sm-6" style="padding:10px;">
 								<span>好聚不好散</span><br>
 								<span>访问:</span><span>2000次</span><br>
 								<span>等级:</span><span>LV2</span><br>
@@ -122,6 +165,8 @@
 							</div>
 						</div>
 					</div>
+
+					
 					
 				</div>
 				<div style="background-color:#fff;">这里是广告位</div>
@@ -130,38 +175,7 @@
 
 			<!-- 正文右侧开始 -->
 			
-			<div class="col-md-9 col-sm-8 col-xs-8">
-
-				<!-- 广告轮播图开始 -->
-				<div id="myCarousel" class="carousel slide">
-
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-					</ol>
-
-					<!-- Carousel items -->
-					<div class="carousel-inner">
-						<div class="active item ">
-							<img class="img-responsive" src="images/1.jpg">
-							<h3 class="carousel-caption">10招搞定Web风格设计指南</h3>
-						</div>
-						<div class="item " style=" background-size:cover;">
-							<img class="img-responsive" src="images/2.jpg"></img>
-							<h3 class="carousel-caption">30种症状证明你应该离开电脑到户外走走</h3>
-						</div>
-						<div class="item">
-							<img class="img-responsive" src="images/3.jpg"></img>
-							<h3 class="carousel-caption">20个让你爱不释手的汉堡菜单设计风格网站示例欣赏</h3>
-						</div>
-
-					</div>
-					<!-- Carousel nav -->
-					<a class="carousel-control left " href="#myCarousel"  style="line-height:370px; height:auto; font-size:10em;"data-slide="prev">&lsaquo;</a>
-					<a class="carousel-control right" href="#myCarousel" style="line-height:370px; height:auto;font-size:10em;" data-slide="next">&rsaquo;</a>
-				</div>
-				<!-- 广告轮播图结束 -->
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 ">
 				<!-- 本周热门排行开始 -->
 				<div class="hot-header module">
 					<h2 class="title"><strong>本周热门排行</strong></h2>
@@ -173,10 +187,10 @@
 						</h2>
 
 						<div class="row">
-							<div class="col-md-3">
-								<img style="display:inline;"src="images/5.jpg"></img>
+							<div class="col-md-3 col-xs-3 col-sm-3 col-lg-3">
+								<img class="img-responsive" style="display:inline;"src="images/5.jpg"></img>
 							</div>
-							<div class="col-md-9">
+							<div class="col-md-9 col-xs-9 col-sm-9 col-lg-9">
 								<p >先来张宏哥的帅照。。。之前发过一次百度联盟抽风的文章，一个点击好几十，那时候就感觉挺惊人的了。 今天感觉脑子有点不够用了。百度联盟数据报告发来，感觉明显有点不正常。  进后台一看，显示其中有九个点击有三百多。尼玛，这是什么广告，单价这么高。怎么感觉过分高了点。 ...</p>
 								<p class="pull-right">
 									<span class="glyphicon glyphicon-time">5个月前(01-10)</span>
@@ -193,10 +207,10 @@
 						</h2>
 
 						<div class="row">
-							<div class="col-md-3">
-								<img style="display:inline;"src="images/5.jpg"></img>
+							<div class="col-md-3 col-xs-3 col-sm-3 col-lg-3">
+								<img class="img-responsive" style="display:inline;"src="images/5.jpg"></img>
 							</div>
-							<div class="col-md-9">
+							<div class="col-md-9 col-xs-9 col-sm-9 col-lg-9">
 								<p >先来张宏哥的帅照。。。之前发过一次百度联盟抽风的文章，一个点击好几十，那时候就感觉挺惊人的了。 今天感觉脑子有点不够用了。百度联盟数据报告发来，感觉明显有点不正常。  进后台一看，显示其中有九个点击有三百多。尼玛，这是什么广告，单价这么高。怎么感觉过分高了点。 ...</p>
 								<p class="pull-right">
 									<span class="glyphicon glyphicon-time">5个月前(01-10)</span>
@@ -206,71 +220,89 @@
 								</p>
 							</div>
 						</div>
-					</div>
-					<div class="hot-content-item module">
-						<h2><small class="hot-content-item-class"><a  href="">站长吐槽</a></small>
-							<a class="hot-content-item-title" href=""> 百度联盟再次抽风了 9个点击310元 这是什么节奏？</a>
-						</h2>
+					</div><div class="hot-content-item module">
+					<h2><small class="hot-content-item-class"><a  href="">站长吐槽</a></small>
+						<a class="hot-content-item-title" href=""> 百度联盟再次抽风了 9个点击310元 这是什么节奏？</a>
+					</h2>
 
-						<div class="row">
-							<div class="col-md-3">
-								<img style="display:inline;"src="images/5.jpg"></img>
-							</div>
-							<div class="col-md-9">
-								<p >先来张宏哥的帅照。。。之前发过一次百度联盟抽风的文章，一个点击好几十，那时候就感觉挺惊人的了。 今天感觉脑子有点不够用了。百度联盟数据报告发来，感觉明显有点不正常。  进后台一看，显示其中有九个点击有三百多。尼玛，这是什么广告，单价这么高。怎么感觉过分高了点。 ...</p>
-								<p class="pull-right">
-									<span class="glyphicon glyphicon-time">5个月前(01-10)</span>
-									<span class="glyphicon glyphicon-eye-open">7813℃</span>
-									<span class="glyphicon glyphicon-comment hot-content-item-comment"><a>3评论</a></span>
-									<span class="glyphicon glyphicon-heart hot-content-item-like"><a>53喜欢</a></span>
-								</p>
-							</div>
+					<div class="row">
+						<div class="col-md-3 col-xs-3 col-sm-3 col-lg-3">
+							<img class="img-responsive" style="display:inline;"src="images/5.jpg"></img>
+						</div>
+						<div class="col-md-9 col-xs-9 col-sm-9 col-lg-9">
+							<p >先来张宏哥的帅照。。。之前发过一次百度联盟抽风的文章，一个点击好几十，那时候就感觉挺惊人的了。 今天感觉脑子有点不够用了。百度联盟数据报告发来，感觉明显有点不正常。  进后台一看，显示其中有九个点击有三百多。尼玛，这是什么广告，单价这么高。怎么感觉过分高了点。 ...</p>
+							<p class="pull-right">
+								<span class="glyphicon glyphicon-time">5个月前(01-10)</span>
+								<span class="glyphicon glyphicon-eye-open">7813℃</span>
+								<span class="glyphicon glyphicon-comment hot-content-item-comment"><a>3评论</a></span>
+								<span class="glyphicon glyphicon-heart hot-content-item-like"><a>53喜欢</a></span>
+							</p>
 						</div>
 					</div>
-					<div class="hot-content-item module">
-						<h2><small class="hot-content-item-class"><a  href="">站长吐槽</a></small>
-							<a class="hot-content-item-title" href=""> 百度联盟再次抽风了 9个点击310元 这是什么节奏？</a>
-						</h2>
+				</div><div class="hot-content-item module">
+				<h2><small class="hot-content-item-class"><a  href="">站长吐槽</a></small>
+					<a class="hot-content-item-title" href=""> 百度联盟再次抽风了 9个点击310元 这是什么节奏？</a>
+				</h2>
 
-						<div class="row">
-							<div class="col-md-3">
-								<img style="display:inline;"src="images/5.jpg"></img>
-							</div>
-							<div class="col-md-9">
-								<p >先来张宏哥的帅照。。。之前发过一次百度联盟抽风的文章，一个点击好几十，那时候就感觉挺惊人的了。 今天感觉脑子有点不够用了。百度联盟数据报告发来，感觉明显有点不正常。  进后台一看，显示其中有九个点击有三百多。尼玛，这是什么广告，单价这么高。怎么感觉过分高了点。 ...</p>
-								<p class="pull-right">
-									<span class="glyphicon glyphicon-time">5个月前(01-10)</span>
-									<span class="glyphicon glyphicon-eye-open">7813℃</span>
-									<span class="glyphicon glyphicon-comment hot-content-item-comment"><a>3评论</a></span>
-									<span class="glyphicon glyphicon-heart hot-content-item-like"><a>53喜欢</a></span>
-								</p>
-							</div>
-						</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-3 col-sm-3 col-lg-3">
+						<img class="img-responsive" style="display:inline;"src="images/5.jpg"></img>
 					</div>
-					<div class="hot-content-item module" style="text-align:center;">
-						<ul class="pagination" >
-							<li><a href="#">&laquo;</a></li>
-							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-							<li><a href="#">&raquo;</a></li>
-						</ul>
+					<div class="col-md-9 col-xs-9 col-sm-9 col-lg-9">
+						<p >先来张宏哥的帅照。。。之前发过一次百度联盟抽风的文章，一个点击好几十，那时候就感觉挺惊人的了。 今天感觉脑子有点不够用了。百度联盟数据报告发来，感觉明显有点不正常。  进后台一看，显示其中有九个点击有三百多。尼玛，这是什么广告，单价这么高。怎么感觉过分高了点。 ...</p>
+						<p class="pull-right">
+							<span class="glyphicon glyphicon-time">5个月前(01-10)</span>
+							<span class="glyphicon glyphicon-eye-open">7813℃</span>
+							<span class="glyphicon glyphicon-comment hot-content-item-comment"><a>3评论</a></span>
+							<span class="glyphicon glyphicon-heart hot-content-item-like"><a>53喜欢</a></span>
+						</p>
 					</div>
 				</div>
-				<!-- 本周热门排行结束 -->
+			</div><div class="hot-content-item module">
+			<h2><small class="hot-content-item-class"><a  href="">站长吐槽</a></small>
+				<a class="hot-content-item-title" href=""> 百度联盟再次抽风了 9个点击310元 这是什么节奏？</a>
+			</h2>
+
+			<div class="row">
+				<div class="col-md-3 col-xs-3 col-sm-3 col-lg-3">
+					<img class="img-responsive" style="display:inline;"src="images/5.jpg"></img>
+				</div>
+				<div class="col-md-9 col-xs-9 col-sm-9 col-lg-9">
+					<p >先来张宏哥的帅照。。。之前发过一次百度联盟抽风的文章，一个点击好几十，那时候就感觉挺惊人的了。 今天感觉脑子有点不够用了。百度联盟数据报告发来，感觉明显有点不正常。  进后台一看，显示其中有九个点击有三百多。尼玛，这是什么广告，单价这么高。怎么感觉过分高了点。 ...</p>
+					<p class="pull-right">
+						<span class="glyphicon glyphicon-time">5个月前(01-10)</span>
+						<span class="glyphicon glyphicon-eye-open">7813℃</span>
+						<span class="glyphicon glyphicon-comment hot-content-item-comment"><a>3评论</a></span>
+						<span class="glyphicon glyphicon-heart hot-content-item-like"><a>53喜欢</a></span>
+					</p>
+				</div>
 			</div>
-			<!-- 正文右侧结束 -->
 		</div>
 	</div>
-	<!-- 正文结束 -->
-	<div class="footer">
-		<div class="footer-line"></div>
-		<div class="footer-content">
-			<span>这里是版权信息</span>
-		</div>
+	<div class="hot-content-item module" style="text-align:center;">
+		<ul class="pagination" >
+			<li><a href="#">&laquo;</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
 	</div>
+</div>
+<!-- 本周热门排行结束 -->
+</div>
+<!-- 正文右侧结束 -->
+</div>
+</div>
+<!-- 正文结束 -->
+<div class="footer">
+	<div class="footer-line"></div>
+	<div class="footer-content">
+		<span>这里是版权信息</span>
+	</div>
+</div>
 
 </body>
 </html>
